@@ -17,7 +17,12 @@ function App() {
       <TodoList todos={todos} setTodos={setTodos} />
       <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
         <form onSubmit={(e) => handleSubmit(e)}>
-          <StyledInput style={{marginRight: '10px'}} onChange={(e) => setCurrentTodo(e.target.value)} value={currentTodo} placeholder="Create a todo" />
+          <StyledInput 
+            style={{marginRight: '10px'}} 
+            onChange={(e) => setCurrentTodo(e.target.value)} 
+            value={currentTodo} 
+            placeholder="Create a todo" 
+          />
           <SubmitButton data-testid='submit-todo' type='submit' value='Submit' />
         </form>
       </div>
