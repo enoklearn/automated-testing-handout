@@ -26,8 +26,7 @@ function AddTaskInput({addTask}) {
           ref={inputRef}
           placeholder="New task..."
         />
-        {input && <SubmitButton 
-          data-testid='add-task-button'
+        {input && <SubmitButton
           onClick={() => addTaskAndClearInput(input)}
         >
           Add

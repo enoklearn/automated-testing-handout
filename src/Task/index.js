@@ -6,10 +6,10 @@ import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 const Task = ({ task, toggleCompleteTask }) => {
   return (
     <Container isCompleted={task.isCompleted}>
-      <div onClick={() => toggleCompleteTask(task)}>
+      <div data-testid='complete-task-button' onClick={() => toggleCompleteTask(task)}>
           {task.isCompleted ? 
-            <CheckBoxIcon sx={{color: '#03a9f4'}} /> : 
-            <CheckBoxOutlineBlankIcon sx={{color: '#fff'}} />}
+            <CheckBoxIcon sx={{color: '#03a9f4'}} data-testid={`${task.id}-task-complete-icon`} /> : 
+            <CheckBoxOutlineBlankIcon sx={{color: '#fff'}} data-testid={`${task.id}-task-not-complete-icon`} />}
       </div>
       <TaskTitleInput isCompleted={task.isCompleted} value={task.title} readOnly />
     </Container>
