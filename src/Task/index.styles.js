@@ -4,13 +4,18 @@ export const Container = styled.div`
   display: flex;
   padding: 0.25rem 0.5rem;
   align-items: center;
+  transition: background-color 0.2s ease-in-out;
 
   &:first-child {
-    margin-top: 0.25rem;
+    padding-top: 0.5rem;
   }
   
   &:last-child {
-    margin-bottom: 0.15rem;
+    padding-bottom: 0.4rem;
+  }
+
+  &:hover {
+    background-color: rgb(31 31 32 / 50%);
   }
 `
 
