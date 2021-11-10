@@ -1,19 +1,16 @@
-# Cypress React
+# Automated Testing with Cypress
 
-## Installation
+## Setup
 
-1. In your terminal, ensure that you are in a folder you are comfortable adding a project to.
-2. Type `git clone https://github.com/calebmcquaid/cypress-react.git`
-3. Type `cd cypress-react`
-4. Type `npm install`
-5. Type `npm start`
-6. Your app should now be running at `localhost:3000` or a similar location
-7. To run your tests, in a new terminal window, type `npm test`
+1. Clone the repo, navigate to the project
+2. Run `npm install`
+3. Run `npm start`
+4. Your local server should be running!
 
-Note: If this is your first time interacting with Cypress or Chrome, you may be prompted to install the software and give the software access to your computer 
+## Running tests
 
-## Instructions
 
-This is a simple Todo app created with Create React App. The project is built to illustrate how automated testing and Test Driven Development can be utilized in software development. 
-
-Take a look at the current tests included in the project and use TDD to add a new feature to the Todo app.
+1. Ensure your local server is running
+2. Run `npm test` (you may be prompted to install the software and give the software access to your computer)
+3. Click `Run 1 integration spec`
+4. Ensure your tests are passing!
