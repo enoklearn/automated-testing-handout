@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 import todoFactory from '../factories/todo'
 
 describe('example to-do app', () => {
@@ -11,18 +10,26 @@ describe('example to-do app', () => {
   })
 
   it('creates multiple todos', () => {
+    // Act
     todos.forEach((todo) => {
-      cy.findByPlaceholderText('Create a todo').type(todo)
-      cy.findByTestId('submit-todo').click()
+      cy.findByPlaceholderText('New task...').type(todo)
+      cy.findByTestId('add-task-button').click()
     })
+
+    // Assert
     cy.findByText(todos[0]).should('be.visible')
     cy.findByText(todos[4]).should('be.visible')
   })
 
   it('creates and completes a todo', () => {
-    cy.findByPlaceholderText('Create a todo').type(todos[0])
+    // Arrange
+    cy.findByPlaceholderText('New task...').type(todos[0])
+
+    // Act
     cy.findByText('Submit').click()
     cy.findByText('Complete').click()
+
+    // Assert
     cy.findByText(todos[0]).should('not.exist')
   })
 })
